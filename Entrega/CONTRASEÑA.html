@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     const usuarioC ="usuario123"
+     const contC = "contraseña123"
+
+     function inciarSesion(usuario, contraseña){
+        try{
+            let usuario=prompt("ingrese el usuario")
+            let contraseña=prompt("ingrese la contraseña")
+            
+            if(usuario === usuarioC && contraseña === contC){
+                console.log("inicio de sesion exitoso");
+                alert("inicio de sesion exitoso")
+            } else {
+                throw new Error("Tus datos no son correctos")
+                 alert("Tus datos no son correctos")
+            }
+         } catch(error){
+            console.error("Algo salió mal" + error.message)
+            alert("Algo salió mal")
+          }
+     }
+     inciarSesion("usuario", "contraseña");
+     inciarSesion("usuarioC", "contC");
+     inciarSesion("usuario", "contC");
+
+    </script>
+</body>
+</html>

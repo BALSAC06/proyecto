@@ -1,0 +1,8 @@
+Soy Balderas Sanchez Cesar Josue, este proyecto lo entrego a destiempo por cuestiones personales y por ciertas cuestiones de logística, estas últimas dos semanas han sido muy difíciles paea mí, pues han ocurrido unas cuantas tragedias en mi vida, espero me den la oportunidad de aunque sea ver el trabajo.
+
+Este trabajo fue muy complicado desde su asignación, el programar se me complica bastante y me doy cuenta que estoy demasiado por detrás de mis compañeros de compu. inicie el proyecto casi desde su asignación, pero hacer los ejercicios por mi parte me costó muchísimo, sumado a la limitante de solo poder trabajar cuando estaba en la facultad.
+desgraciadamente tuve el problema de que los archivos de mi usb, se corrompieron y tuve que iniciar todo desde 0.
+
+los ejercicios que más me llamaron la atención fueron los de los bits y los de las cajas, el poder tener tanto dinamismo en la página le da una mejor interacción al usuario, al principio tuve problemas con el de la caja, porque no se presentaban las imagenes diferentes que quería, así que al final opté por hacer diferentes variables y eventos para que mostrara diferentes contenidos, después de entender el funcionamiento, agregué imágenes y demás contenido a la apertura de las cajas.
+
+A pesar de que me ha costado trabajo y que desgraciadamente, ultimamente he pasado por bastantes tragedias, me siento orgulloso por mi resilencia y lo que he logrado, también estoy agradecido con los instructores, ambos han sido muy pacientes y atentos conmigo y eso lo agradezco infinitamente.

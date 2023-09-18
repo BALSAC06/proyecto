@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+    background-color: aquamarine;
+}
+h1{
+    font: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 5rem;
+}
+.formulario{
+    background-color: blue;
+    width:min-content(60rem, 100%);/*Para mantener un minimo de 60 rem, y el 100 es para mantener la misma forma del padre*/
+    margin:0 auto;/*centra un elemento de tipo block, cuando su display no es flex*/
+    padding: 5rem;
+    border-radius: 5rem;
+    width: 80%;
+    height: 60%;
+}
+.formulario fieldset{
+    border: none;
+}
+.formulario legend{
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--pink);
+}
+.campo{
+    margin-bottom: 1rem;
+}
+.campo label{
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    display: block;
+
+}
+.campo input{
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+.campo textarea{
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    border: none;
+    height: 20rem;
+}
+.input-text{
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.boton-enviar{
+    background-color: var(--violet);
+    color: var(--negro);
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 100%;
+    text-align: center;
+    border: none;
+}
+
+</style>
+<body>
+    <form class="formulario"></div>
+            <h1>Inicio de sesión</h1>
+            <fieldset>
+                <div class="contenedor-campos">
+                    <div class="campo">
+                        <label for="">Correo</label>
+                        <input type="e-mail" id="email-input" placeholder="Tu e-mail">
+                    </div>
+                </div>
+                <div class="contenedor-campos">
+                    <div class="campo">
+                        <label for="">Conraseña</label>
+                        <input type="password" id="password-input" placeholder="Tu contraseña">
+                    </div>
+                </div>   
+            <button id="btn-ingresar">
+                Ingresar
+            </button>
+        </fieldset>
+    </form>        
+    <script>
+        function ingresar(){
+            const emailInput = document.getElementById("email-input")
+            const passwordInput=document.getElementById("password-input")
+            const passwordCorrecta="123456"
+            const emailCorrecto  = "si@gmail.com"
+
+            //alert(emailInput.value)
+
+            if(emailInput.value == ""){
+                alert("No has ingrresado tu correo")
+            }
+
+            if(passwordInput.value == ""){
+                alert("No has ingresado una contraseña")
+            }
+            if(passwordInput.value === passwordCorrecta && 
+            emailInput.value === emailCorrecto
+            ){
+                alert("Tus datos son correctos")
+            } else {
+                alert("Tus datos son incorrectos")
+            }
+        }
+        document.getElementById("btn-ingresar").addEventListener("click", ingresar)
+    </script>
+</body>
+</html>

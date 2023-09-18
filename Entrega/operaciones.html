@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var menu = prompt("ingrese la operación: \n1. suma \n2. resta\n3. multiplicacion\n4. división")
+       const op1= parseInt(prompt("ingrese el dígito"))
+       const op2= parseInt(prompt("ingrese un numero"))
+       var results=op1+op2
+       var resultr=op1-op2
+       var resultm=op1*op2
+       var resultd=op1/op2
+        switch(parseInt(menu)){ 
+            case 1:
+                alert(results);
+                break
+            case 2:
+                alert(resultr)
+                break
+            case 3:
+            alert(resultm);
+            break
+            case 4:
+            alert(resultd);
+            break
+            default:
+                alert("Opción no válida")
+            
+        }
+        
+        
+
+          
+    </script>
+</body>
+</html>

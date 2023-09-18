@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+           // Palabras preestablecidas para reemplazar vocales
+            const encriptador = {
+            'a': 'ai',
+            'e': 'enter',
+            'i': 'imes',
+            'o': 'ober',
+            'u': 'ufat'
+        };
+
+    function encriptarTexto(texto) {
+    let textoEncriptado = '';
+        for (let i = 0; i < texto.length; i++) {
+            const letra = texto[i].toLowerCase();
+            if (encriptador.hasOwnProperty(letra)) {
+            textoEncriptado += encriptador[letra];
+                } else {
+                    textoEncriptado += texto[i];
+                }
+            }
+            return textoEncriptado;
+        }
+
+        function desencriptarTexto(textoEncriptado) {
+            let textoDesencriptado = '';
+            let palabraActual = '';
+            for (let i = 0; i < textoEncriptado.length; i++) {
+                const caracter = textoEncriptado[i];
+                if (caracter === ' ' || i === textoEncriptado.length - 1) {
+                    if (i === textoEncriptado.length - 1) {
+                        palabraActual += caracter;
+                    }
+                    for (const palabra in encriptador) {
+                        if (encriptador.hasOwnProperty(palabraActual)) {
+                            textoDesencriptado += palabraActual;
+                        }
+                    }
+                    palabraActual = '';
+                } else {
+                    palabraActual += caracter;
+                }
+            }
+            return textoDesencriptado;
+        }
+
+    function verificartexto(texto) {
+    if ((/[A-ZáéíóúÁÉÍÓÚ]/).test(texto)) {
+    alert("No se admiten mayúsculas y acentos.");
+            return false;
+        }
+        return true;
+    }
+
+    const textoOriginal = prompt("Ingrese el texto deseado");
+    if(verificartexto(textoOriginal)){
+        const textoEncriptado = encriptarTexto(textoOriginal);
+        console.log('Texto Encriptado:', textoEncriptado);
+        alert("Texto encriptado: " + textoEncriptado);
+
+        const textoen = prompt("Ingrese el texto encriptado");
+        const textoDesencriptado = desencriptarTexto(textoEncriptado); // Cambia a desencriptarTexto(textoen)
+        console.log('Texto Desencriptado:', textoDesencriptado);
+        alert("Texto desencriptado: " + textoOriginal);
+    }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function verifyCredentials(username, password) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      
+      const validUsername = 'usuario123';
+      const validPassword = 'contraseña123';
+
+      if (username === validUsername && password === validPassword) {
+        resolve('Credenciales válidas. Acceso concedido.');
+      } else {
+        reject('Credenciales inválidas. Acceso denegado.');
+      }
+    }, 2000); 
+  });
+}
+async function checkUserCredentials(username, password) {
+  try {
+    const result = await verifyCredentials(username, password);
+    console.log(result);
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+const username = 'usuario123';
+const password = 'contraseña123';
+
+checkUserCredentials(username, password)
+    </script>
+</body>
+</html>

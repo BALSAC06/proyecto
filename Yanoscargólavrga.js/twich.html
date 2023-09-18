@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajas</title>
+    <h1>Escoge una Caja</h1>
+    <style>
+
+        body{
+            background-color: aqua;
+            align-content: center;
+            text-align: center;
+        }
+        .caja, .cajaOculta{
+            width:150px;
+            padding: 2rem;
+        } 
+        .caja:hover, .cajaOculta:hover{
+            cursor: pointer;
+        }  
+        .cajaOculta, .contenido{
+            display: none;
+        }
+        .cajaOculta, .contenido2{
+            display: none;
+        }
+        .cajaOculta, .contenido3{
+            display: none;
+        }
+        .contenido{
+            background: rgba(0, 0, 225, 0.38);
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top:0;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+        .contenido2{
+            background: rgb(172, 50, 50);
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top:0;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+        .contenido3{
+            background: black;
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            top:0;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+        .sorpresa{
+            width: 500px;
+            height: 500px;
+            background: goldenrod;
+            border: 5px;
+            align-content: center;
+            text-align: center;
+            border-radius: 1rem;
+            padding: 25rem;
+            align-content: center;
+            align-items: center;
+        }
+        .sorpresa2{
+            width: 500px;
+            height: 500px;
+            background: rgb(174, 0, 255);
+            border: 5px;
+            align-content: center;
+            text-align: center;
+            border-radius: 1rem;
+            padding: 25rem;
+            align-content: center;
+        }
+        .sorpresa3{
+            width: 500px;
+            height: 500;
+            background: purple;
+            border: 5px;
+            align-content: center;
+            text-align: center;
+            border-radius: 1rem;
+            padding: 25px;
+        }
+        .banner{
+            background-image: url(../NO\ ME\ REPRUEBEN.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 400px;
+            width: 500px;
+            margin-bottom: 5px;
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .banner2{
+            background-image: url(../PERDON.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 400px;
+            width: 500px;
+            margin-bottom: 5px;
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            align-content: center;
+        }
+        .banner3{
+            background-image: url(../mEPERDONAS.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 400px;
+            width: 500px;
+            margin-bottom: 5px;
+            position: relative;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="cajas">
+        <img src= "caja1.png" alt="" class="caja" id="caja1">
+        <img src= "caja2.png" alt="" class="cajaOculta" id="caja2">
+        <img src= "caja1.png" alt="" class="caja" id="caja3">
+        <img src= "caja2.png" alt="" class="cajaOculta" id="caja4">
+        <img src= "caja1.png" alt="" class="caja" id="caja5">
+        <img src= "caja2.png" alt="" class="cajaOculta" id="caja6">
+    </div>
+        <div class="contenido">
+            <div class="sorpresa">
+                <h1>Me aceptas tarde el trabajo kenny???</h1>
+                <div class="banner">   
+                </div>
+            </div>
+        </div>
+        <div class="contenido2">
+            <div class="sorpresa2">
+                <h1>Perdon kenny, me pasaron muchas cosas):</h1>
+                <div class="banner2">
+                </div>
+            </div>
+        </div>
+        <div class="contenido3">
+            <div class="sorpresa3">
+                <h1>Por favor acepta</h1>
+                <div class="banner3">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener("keyup", (evento) =>{
+            if(evento.keyCode === 27){
+                document.getElementsByClassName("contenido")[0].style.display="none";
+            } 
+        })
+        document.addEventListener("keyup", (evento) =>{
+            if(evento.keyCode === 27){
+                document.getElementsByClassName("contenido2")[0].style.display="none";
+            } 
+        })
+        document.addEventListener("keyup", (evento) =>{
+            if(evento.keyCode === 27){
+                document.getElementsByClassName("contenido3")[0].style.display="none";
+            } 
+        })
+        function abrir(){
+            document.getElementById("caja1").style.display="none";
+            document.getElementById("caja2").style.display="inline";
+            document.getElementsByClassName("contenido")[0].style.display="flex";
+
+        }
+        function abrir2(){
+            document.getElementById("caja3").style.display="none";
+            document.getElementById("caja4").style.display="inline";
+            document.getElementsByClassName("contenido2")[0].style.display="flex";
+
+        }
+        function abrir3(){
+            document.getElementById("caja5").style.display="none";
+            document.getElementById("caja6").style.display="inline";
+            document.getElementsByClassName("contenido3")[0].style.display="flex";
+
+        }
+        function cerrar(){
+            document.getElementsByClassName("contenido")[0].style.display="none";
+
+        }
+        document.getElementById("caja1") .addEventListener("click", abrir);
+        document.getElementById("caja3") .addEventListener("click", abrir2);
+        document.getElementById("caja5") .addEventListener("click", abrir3);        
+    </script>
+</body>
+</html>

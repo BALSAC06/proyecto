@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Carrusel de Imágenes</title>
+  <style>
+    body{
+        align-items: center;
+        align-content: center;
+        background-color: red;
+    }
+    #carousel-container {
+      width: 600px;
+      
+      overflow: hidden;
+      position: relative;
+      margin: 0 auto;
+    }
+    #carousel-images {
+      display: flex;
+      transition: transform 0.3s ease-in-out;
+      width: 600px;
+      margin: 0 auto;
+    }
+    img {
+      width: 600px;
+      height: 450px;
+    }
+    button {
+      cursor: pointer;
+      background: lightblue;
+      border: 3rem;
+      border-bottom: 5rem;
+      border-radius: 5rem;
+      width: 5rem;
+      height: 2rem;
+      margin: 0 auto;
+      text-align: center;
+      align-items: center;
+      align-content: center;
+    }
+    .box{
+        background: linear-gradient(magenta,purple,blue);
+        padding: 5rem;
+        border: 7rem;
+        border-radius: 10rem;
+        align-items: center;
+        align-content: center;
+        width: 40rem;
+        height: 30rem;
+        margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+    <div class="box">
+        <div id="carousel-container">
+            <div id="carousel-images">
+            <img src="../meperyyo.jpg" alt="Imagen 1">
+            <img src="../meperyyo2.jpg" alt="Imagen 2">
+            <img src="../meperyyo3.jpg" alt="Imagen 3">
+            </div>
+        </div>
+        <button onclick="prevImage()">Anterior</button>
+        <button onclick="nextImage()">Siguiente</button>
+    </div>
+  <script>
+    const carouselImages = document.getElementById('carousel-images');
+    const imageWidth = 600; 
+    let currentIndex = 0;
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + 3) % 3;
+      updateCarousel();
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % 3;
+      updateCarousel();
+    }
+
+    function updateCarousel() {
+      const transformValue = -currentIndex * imageWidth + 'px';
+      carouselImages.style.transform = `translateX(${transformValue})`;
+    }
+
+    
+    updateCarousel();
+  </script>
+</body>
+</html>

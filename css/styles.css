@@ -1,0 +1,234 @@
+:root{
+/*PROPIEDADES PERSONALIZADAS*/
+--blanco: #ffffff;
+--negro: #000000;
+--azul: #313866;
+--purple: #504099;
+--violet: #974EC3;
+--pink: #FE7BE5;
+}
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Tilt+Prism&display=swap');
+/*Globales*/
+html{
+ font-family: 'Barlow Condensed', sans-serif;
+ box-sizing: border-box;
+}
+
+*, * .before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 16px;
+}
+/*Tipografía*/
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.5rem;
+} 
+h1,h2,h3{
+    text-align: center;
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto 0 auto;
+}
+
+.nav-bg{
+    background-color: var(--azul);
+}
+.navegacion-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+@media(min-width: 768px){
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content:space-between;
+    }
+}
+.navegacion-principal a{
+    display: block;
+    text-align: center;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+/*1Rem 0 10px*/
+ .navegacion-principal a:hover{
+    background-color: var(--purple);
+    color: var(--pink);
+ }
+
+ .banner{
+    background-image: url(../IMG/Web\ design\ banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    margin-bottom: 2rem;
+    position: relative;
+
+    /****************/
+    display: flex;
+    flex-direction: column;
+    align-items: center;/*Alinea verticalmentye*/
+    justify-content: center; /*Alinea Horizontalmente*/
+    text-align: center;
+
+ }
+ .contenido-banner{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    text-align: center;
+    height: 100%
+ }
+.contenido-banner h2, p{
+    color: var(--blanco);
+    padding-top: 2rem;
+}
+.contenido-banner p{
+    font-size: 1rem;
+}
+.boton{
+    background-color: var(--violet);
+    color: var(--purple);
+    padding: 1rem 3rem;
+    margin-top:  3rem;
+    font-size: 2.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 80%;
+}
+
+.sombra{
+    -webkit-box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.77);
+    -moz-box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.77);
+    box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.77);
+    background-color: var(--pink);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    width: 90%;
+    /**/
+}
+.servicios{
+    display: block;
+}
+/*Servicios*/
+@media(min-width: 768px){
+    .servicios{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+    }
+
+}
+
+/**/
+.Servicio{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.Servicio h3{
+ color: var(--purple);
+ font-weight: 400;
+ text-align: justify;
+
+}
+
+.Servicio p{
+    text-align: justify;
+    line-height: 2;
+}
+.Servicio .iconos{
+    height: 10rem;
+    width: 10rem;
+    background-color: var(--violet);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/*formulario*/
+.formulario{
+    background-color: var(--azul);
+    width:min-content(60rem, 100%);/*Para mantener un minimo de 60 rem, y el 100 es para mantener la misma forma del padre*/
+    margin:0 auto;/*centra un elemento de tipo block, cuando su display no es flex*/
+    padding: 2rem;
+    border-radius: 5%;
+    width: 80%;
+    height: 60%;
+}
+.formulario fieldset{
+    border: none;
+}
+.formulario legend{
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--pink);
+}
+.campo{
+    margin-bottom: 1rem;
+}
+.campo label{
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    display: block;
+
+}
+.campo input{
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+.campo textarea{
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    border: none;
+    height: 20rem;
+}
+.input-text{
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.boton-enviar{
+    background-color: var(--violet);
+    color: var(--negro);
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 100%;
+    text-align: center;
+    border: none;
+}
+
+/**/
+.footer{
+    text-align: center;
+}

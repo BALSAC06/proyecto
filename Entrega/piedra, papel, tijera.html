@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, papel  o tijera</title>
+    <h1>Jugar PPT</h1>
+    <H2>seleccionar opciones</H2>
+    <h3>1.Piedra</h3>
+    <h3>2.Papel</h3>
+    <h3>3.Tijera</h3>
+</head>
+<body>
+    <script>
+       let opciones=(1, 2, 3);
+       let opcjug=prompt("ingrese 1.piedra2.papel,3.tijera")
+       let opcpc=Math.floor(Math.random()*3)+1
+       let ganadospc=0
+       let ganadosjugador=0
+       
+       if(opcjug==1&&opcpc==2){
+         alert('GANA PC');
+         ganadospc++;
+       }else if(opcjug==2&&opcpc==1){
+         alert("GANA JUGADOR")
+         ganadosjugador++;
+       }else if(opcjug==3&&opcpc==2){
+         alert('GANA PC');
+         ganadospc++;
+       }else if(opcjug==2&&opcpc==3){
+         alert("GANA JUGADOR");
+         ganadosjugador++;
+       }else if(opcjug==1&&opcpc==3){
+         alert('GANA PC');
+         ganadospc++;
+       }else if(opcjug==3&&opcpc==1){
+         alert("GANA JUGADOR");
+         ganadosjugador++;
+       }else if(opcjug==opcpc){
+        alert('Empate');
+        ganadospc++;
+       }else if(opcjug!=1||opcjug!=2||opcjug!=3){
+         alert("Error");
+         ganadosjugador++;
+       }
+
+       
+    </script>
+</body>
+</html>
